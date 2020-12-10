@@ -1,0 +1,178 @@
+*, ::before, ::after {
+    position: relative;
+    box-sizing: border-box;
+}
+
+:root {
+    --skewed-degree: -15deg;
+    --inherit-font-size: 16px;
+    --width: 1320px;
+    --color-gray-lighter: #acabab;
+    --color-gray-darker: #6a6a6a;
+    --color-blue-lighter: #5065f5;
+    --color-blue-darker: #394bc3;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #151414 url(../img/bg.png) no-repeat;
+    font-size: var(--inherit-font-size);
+    font-family: 'Exo 2', sans-serif;
+    line-height: 1;
+    color: white;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0.35em;
+}
+
+body::-webkit-scrollbar-track {
+    background: #26282d;
+    border-radius: 10em;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #696c72;
+    border: 0.1em solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+header {
+    display: grid;
+}
+
+button, input {
+    font: inherit;
+    color: inherit;
+    line-height: 1;
+    background: unset;
+    border: unset;
+    outline: unset;
+    -webkit-appearance: unset;
+}
+
+strong {
+    font-size: 1.1em;
+}
+
+a {
+    color: #767d8c;
+    text-decoration: none;
+}
+
+a.ghost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+}
+
+.hidden {
+    display: none !important;
+}
+
+[hidden] {
+    visibility: hidden;
+}
+
+.marked {
+    color: #ffc500;
+}
+
+/* Colours */
+
+.green {
+    color: #89cc32;
+}
+
+.red {
+    color: #CC4450;
+}
+
+.darkgray {
+    color: #3e4147;
+}
+
+.gray {
+    color: #686c75;
+}
+
+.white {
+    color: white;
+}
+
+/* Skews */
+
+.skewed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: inherit;
+    transform: skew(var(--skewed-degree));
+    transition: inherit;
+    z-index: -1;
+}
+
+/* Icons */
+
+[class *="icon"] {
+    display: block;
+    background: no-repeat center/contain;
+}
+
+.icon__window {
+    background-image: url("../img/icons/window.png");
+    width: 1em;
+    height: 1.15em;
+}
+
+.icon__contract {
+    background-image: url("../img/icons/contract.png");
+    width: 1em;
+    height: 1.15em;
+}
+
+.icon__profile {
+    background-image: url("../img/icons/profile.png");
+    width: 1em;
+    height: 1.15em;
+}
+
+.icon__bar-chart {
+    background-image: url("../img/icons/bar-chart.png");
+    width: 1em;
+    height: 1.15em;
+}
+
+.icon__vk {
+    background-image: url(/assets/img/icons/vk.png);
+}
+
+.icon__instagram {
+    background-image: url(/assets/img/icons/instagram.png);
+}
+
+.icon__youtube {
+    background-image: url(/assets/img/icons/youtube.png);
+}
+
+.icon__twitch {
+    background-image: url(/assets/img/icons/twitch.png);
+}
+
+.icon__funnel {
+    background-image: url("/assets/img/icons/funnel_4.svg");
+    width: 1.25em;
+    height: 1.25em;
+}
+
+/* Topbar */
+
